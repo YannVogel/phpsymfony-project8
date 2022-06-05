@@ -17,9 +17,13 @@
                     <span class="pull-right">
                         Auteur :
                         {% if task.user %}
-                            <a href="{{ path('user_edit', {'id' : task.user.id}) }}">
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <a href="{{ path('user_edit', {'id' : task.user.id}) }}">
+                                    {{ task.user.username }}
+                                </a>
+                            {% else %}
                                 {{ task.user.username }}
-                            </a>
+                            {% endif %}
                         {% else %}
                             anonyme
                         {% endif %}
