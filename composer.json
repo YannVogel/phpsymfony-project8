@@ -31,7 +31,9 @@
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
-        "symfony/phpunit-bridge": "^3.0"
+        "symfony/phpunit-bridge": "^3.0",
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "fzaninotto/faker": "^1.9"
     },
     "scripts": {
         "symfony-scripts": [

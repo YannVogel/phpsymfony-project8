@@ -22,7 +22,7 @@ class User implements UserInterface
     //default role for all registered users
     const ROLE_USER     = 'ROLE_USER';
 
-    //TODO: grant access to users management page and anonymous tasks deletion
+    //grant access to users management page and anonymous tasks deletion
     const ROLE_ADMIN    = 'ROLE_ADMIN';
 
     /**
