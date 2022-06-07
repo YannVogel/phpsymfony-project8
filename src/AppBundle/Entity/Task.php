@@ -8,6 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity
  * @ORM\Table
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\TaskRepository")
  */
 class Task
 {
@@ -39,6 +40,12 @@ class Task
      * @ORM\Column(type="boolean")
      */
     private $isDone;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="tasks")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=true)
+     */
+    private $user;
 
     public function __construct()
     {
@@ -89,5 +96,21 @@ class Task
     public function toggle($flag)
     {
         $this->isDone = $flag;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
     }
 }

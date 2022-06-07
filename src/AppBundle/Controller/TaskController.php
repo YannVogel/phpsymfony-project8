@@ -7,6 +7,7 @@ use AppBundle\Form\TaskType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class TaskController extends Controller
 {
@@ -30,6 +31,7 @@ class TaskController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $task->setUser($this->getUser());
 
             $em->persist($task);
             $em->flush();
@@ -83,6 +85,15 @@ class TaskController extends Controller
      */
     public function deleteTaskAction(Task $task)
     {
+        if (!$this->canDeleteTask($task)) {
+            $this->addFlash(
+                'error',
+                "Vous n'avez pas les autorisations suffisantes pour supprimer cette tâche."
+            );
+
+            return $this->redirectToRoute('task_list');
+        }
+
         $em = $this->getDoctrine()->getManager();
         $em->remove($task);
         $em->flush();
@@ -90,5 +101,17 @@ class TaskController extends Controller
         $this->addFlash('success', 'La tâche a bien été supprimée.');
 
         return $this->redirectToRoute('task_list');
+    }
+
+    private function canDeleteTask(Task $task)
+    {
+        $user = $this->getUser();
+
+        switch ($taskUser = $task->getUser()) {
+            case null:
+                return $this->isGranted('ROLE_ADMIN');
+            default:
+                return $user === $taskUser;
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -14,6 +15,16 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  */
 class User implements UserInterface
 {
+    const USER_SPECIFIC_ROLES = [
+        'Rôle administrateur'   => self::ROLE_ADMIN,
+    ];
+
+    //default role for all registered users
+    const ROLE_USER     = 'ROLE_USER';
+
+    //grant access to users management page and anonymous tasks deletion
+    const ROLE_ADMIN    = 'ROLE_ADMIN';
+
     /**
      * @ORM\Column(type="integer")
      * @ORM\Id
@@ -38,6 +49,21 @@ class User implements UserInterface
      * @Assert\Email(message="Le format de l'adresse n'est pas correcte.")
      */
     private $email;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Task", mappedBy="user")
+     */
+    private $tasks;
+
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
+
+    public function __construct()
+    {
+        $this->tasks = new ArrayCollection();
+    }
 
     public function getId()
     {
@@ -81,10 +107,46 @@ class User implements UserInterface
 
     public function getRoles()
     {
-        return array('ROLE_USER');
+        $roles = $this->roles;
+        if (!in_array(self::ROLE_USER, $roles)) {
+            $roles[] = self::ROLE_USER;
+        }
+
+        return $roles;
+    }
+
+    /**
+     * @param array $roles
+     * @return $this
+     */
+    public function setRoles(array $roles)
+    {
+        if (!in_array(self::ROLE_USER, $roles)) {
+            $roles[] = self::ROLE_USER;
+        }
+
+        $this->roles = array_values($roles);
+        return $this;
     }
 
     public function eraseCredentials()
     {
     }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getTasks()
+    {
+        return $this->tasks;
+    }
+
+    /**
+     * @param ArrayCollection $tasks
+     */
+    public function setTasks($tasks)
+    {
+        $this->tasks = $tasks;
+    }
+
 }
