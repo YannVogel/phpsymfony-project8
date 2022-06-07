@@ -1,0 +1,7 @@
+language: php
+php:
+  - '7.1'
+script:
+  - composer update
+  - bin/console doctrine:fixtures:load -q
+  - vendor/bin/phpunit
