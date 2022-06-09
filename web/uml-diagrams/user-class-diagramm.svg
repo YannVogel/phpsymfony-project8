@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="564" height="492" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<ellipse fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" cx="462" cy="98" rx="10" ry="10" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="462" y="120">UserInterface</text>
+	<line stroke="black" stroke-opacity="1" x1="417" y1="122" x2="507" y2="122" />
+	<line stroke="black" stroke-opacity="1" x1="417" y1="130" x2="507" y2="130" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="421" y="142">eraseCredentials()</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="421" y="154">getSalt()</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="421" y="166">getPassword()</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="421" y="178">getUsername()</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="421" y="190">getRoles()</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="548" y="258" width="3" height="221" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="380" y="476" width="171" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="376" y="254" width="172" height="222" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="462" y="266">User</text>
+	<line stroke="black" stroke-opacity="1" x1="376" y1="268" x2="548" y2="268" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="280">-</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="280">$username</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="292">-</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="292">$email</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="304">-</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="304">$password</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="316">-</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="316">$roles</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="328">-</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="328">$tasks</text>
+	<line stroke="black" stroke-opacity="1" x1="376" y1="330" x2="548" y2="330" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="342">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="342">eraseCredentials() </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="354">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="354">getSalt(): string </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="366">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="366">getPassword(): string </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="378">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="378">getUsername(): string </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="390">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="390">getRoles(): array </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="402">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="402">getEmail(): string </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="414">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="414">getTasks(): ArrayCollection </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="426">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="426">setUsername(string $username) </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="438">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="438">setEmail(string $email) </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="450">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="450">setPassword(string $password) </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="462">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="462">setRoles(array $roles) </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="380" y="474">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="391" y="474">setTasks(ArrayCollection $tasks) </text>
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="#000000" stroke-opacity="1" x1="463" y1="253" x2="462" y2="197" />
+	<line stroke="#000000" stroke-opacity="1" x1="462" y1="192" x2="456" y2="198" />
+	<line stroke="#000000" stroke-opacity="1" x1="462" y1="192" x2="468" y2="197" />
+	<line stroke="#000000" stroke-opacity="1" x1="456" y1="198" x2="468" y2="197" />
+</g>
+</svg>
