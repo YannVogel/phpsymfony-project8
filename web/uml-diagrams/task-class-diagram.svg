@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="627" height="419" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="611" y="209" width="3" height="197" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="435" y="403" width="179" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="431" y="205" width="180" height="198" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="521" y="217">Task</text>
+	<line stroke="black" stroke-opacity="1" x1="431" y1="219" x2="611" y2="219" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="231">-</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="231">$title</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="243">-</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="243">$content</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="255">-</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="255">$createdAt</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="267">-</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="267">$isDone</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="279">-</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="279">$user</text>
+	<line stroke="black" stroke-opacity="1" x1="431" y1="281" x2="611" y2="281" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="293">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="293">getTitle(): string </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="305">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="305">getContent(): string </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="317">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="317">getCreatedAt(): DateTime </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="329">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="329">isDone(): bool </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="341">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="341">getUser(): User | null </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="353">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="353">setTitle(string $title) </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="365">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="365">setContent(string $content) </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="377">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="377">setCreatedAt(DateTime $createdAt) </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="389">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="389">toggle(bool $flag) </text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" x="435" y="401">+</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="446" y="401">setUser(?User $user = null) </text>
+</g>
+</svg>
